@@ -4,6 +4,8 @@
 /**
  * main - main block
  * Description: Print statements based on the last digit of the random number.
+ * LastDigit - the string of numbers
+ * @num: the last digit of the string
  * Return: 0
  */
 int Last_Digit(int num);
