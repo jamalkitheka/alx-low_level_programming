@@ -6,14 +6,14 @@
  */
 int main(void)
 {
-char c;
-for (c = 'a'; c <= 'z'; c++)
+	char c;
+	for (c = 'a'; c <= 'z'; c++)
 {
-if (c == 'e' || c == 'q')
-			;
-else
-putchar (c);
-}
-putchar ('\n');
-return (0);
+	if (c == 'e' || c == 'q')
+		;
+	else
+		putchar (c);
+	}	
+	putchar ('\n');
+	return (0);
 }
