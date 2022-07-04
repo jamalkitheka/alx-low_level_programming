@@ -1,44 +1,26 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-
 /**
- *  * main - Entry point
- *   * LastDigit - the string of numbers
- *    * @num: the last digit of the string
- *     * Return: Always 0 (Success)
- *      */
-int Last_Digit(int num);
+ * main - main block
+ * Description: Print statements based on the last digit of the random number.
+ * Return: 0
+ */
 int main(void)
-
 {
-int n;
-int LastDigit;
+	int n;
+	int m;
 
-srand(time(0));
-n = rand() - RAND_MAX / 2;
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	m = n % 10;
 
-LastDigit = n % 10;
-
-printf("Last digit of ");
-printf("%d ", n);
-
-printf("is ");
-
-if (LastDigit > 5)
-{
-printf("%d and is greater than 5\n", LastDigit);
+	if (m > 5)
+		printf("Last digit of %i is %i and is greater than 5\n",n, m);	
+	else if (m == 0)
+		printf("Last digit of %i is %i and is 0\n",n,m);										
+	else
+		printf("Last figit of %i is %i and is less than 6 and not 0\n", n,m);
+	return(0)
 }
 
-if (LastDigit == 0)
-
-{
-printf("%d and is 0\n", LastDigit);
-}
-
-if (LastDigit < 6 && LastDigit != 0)
-{
-printf("%d and is less than 6 and not 0\n", LastDigit);
-}
-return (0);
-}
