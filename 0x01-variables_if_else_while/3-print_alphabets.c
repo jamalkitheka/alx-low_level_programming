@@ -1,29 +1,19 @@
 #include <stdio.h>
 /**
- * main - main block
+ * main - Entry point
  * Description: Use `putchar` to print lowercase and then uppercase alphabet.
  * Return: 0
  */
 int main(void)
 {
-	char c = 'a';
-
-	while (c <= 'z')
+	char c;
+	for (c = 'a'; c <= 'z'; c++)
 	{
-		putchar(c);
-		c++;
-											     }
-
-	c = 'A';
-
-	while (c <= 'Z')
-	{
-		putchar(c);
-										
-	       	c++;
+		if (c == 'e' || c == 'q')
+			;
+		else
+			putchar (c);
 	}
-
-	putchar('\n');
-
+	putchar ('\n');
 	return (0);
 }
