@@ -1,12 +1,13 @@
 #include <stdio.h>
 /**
- * main - Entry point
- *  
- * Return: Always 0 (Success)
+ * main -main block
+ * you can only use 'putchar' upto four times
+ * Return:0
  */
 int main(void)
 {
 	int i;
+
 	for (i = 0; i < 10; i++)
 	{
 		putchar(i + '0');
