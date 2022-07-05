@@ -5,9 +5,9 @@
  * Return: 0
  */
 
-int _islower(int j)
+int _islower(int c)
 {
-	if (j >= 97)
+	if (c >= 97)
 	{
 		return (1);
 	}
