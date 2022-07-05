@@ -2,20 +2,19 @@
 
 /**
  * print_alphabet_x10 - prints the lowercase alphabets
- * only use _putchar twice in your code
- *  Return: 0
+ * only use _putchar twice
+ * Return:0
  */
-
 void print_alphabet_x10(void)
 {
-	int j;
-	int m;
-	
-	for (m = 0; m < 10; m++)
+	int n = 10;
+	int c;
+
+	for (n = 0; n < 10; n++)
 	{
-		for (j = 'a'; j <= 'z'; j++)
+		for (c = 'a'; c <= 'z'; c++)
 		{
-			_putchar(j);
+			_putchar(c);
 		}
 		_putchar('\n');
 	}
