@@ -4,9 +4,9 @@
  * print_alphabet -> Print alphabet in lowercase using only `_putchar`
  * Return: Always 0
  */
-voi print_alphabet(void)
+void print_alphabet(void)
 }
-	int h;
+	char h;
 
 	for (h = "a"; h <= 'z'; h++)
 	}
