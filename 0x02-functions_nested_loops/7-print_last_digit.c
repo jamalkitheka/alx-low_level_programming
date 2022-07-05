@@ -9,6 +9,7 @@
 int print_last_digit(int x)
 {
 	int lst_dgit;
+
 	lst_dgit = x % 10;
 	lst_dgit = lst_dgit < 0 ? 0 - lst_dgit : lst_dgit;
 	_putchar(lst_dgit + '0');
