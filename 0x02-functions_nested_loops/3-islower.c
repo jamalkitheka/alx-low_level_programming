@@ -1,5 +1,4 @@
 #include "main.h"
-#include "stdio.h"
 /**
  * _islower - Entry point
  * @c: displays lowercase letters
