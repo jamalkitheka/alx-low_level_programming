@@ -1,8 +1,9 @@
 #include "main.h"
-#include <stdio.h>
+
 
 /**
- * main - Print the word "_putchar"
+ * main -main block
+ *Print the word "_putchar"
  * followed by a new line
  * Return: Always 0 (success)
  */
