@@ -1,8 +1,10 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
- * main -prints the _putchar
+ * main - Print the word _putchar
  * followed by a new line
- * return: 0 
+ * Return: Always 0 (success)
  */
 
 int main(void)
@@ -16,6 +18,6 @@ int main(void)
 	_putchar('a');
 	_putchar('r');
 	_putchar('\n');
-	
-	return(0);
+
+	return (0);
 }
