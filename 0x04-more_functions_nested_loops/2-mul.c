@@ -1,10 +1,10 @@
 include "main.h"
 
 /**
- * mul - print multiple ints
- * @a: character
- * @b: character
- * Return: Always 0
+ * mul -multiplies 2 numbers
+ * @a: integer parameter 1
+ * @b: integer parameter 2
+ * Return: success and integer
  */
 
 int mul(int a, int b)
