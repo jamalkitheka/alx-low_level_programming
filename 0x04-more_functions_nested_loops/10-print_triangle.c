@@ -3,24 +3,22 @@
 /**
  * print_triangle - prints triangles aligned right, using '#'
  * @size: the size of line
- * Return: 0
+ * Return:0
  */
 
 void print_triangle(int size)
 {
-	int i;
-	int j;
-	int k;
+	int r, s, t;
 
 	if (size <= 0)
 		_putchar('\n');
-	for (i = 1; i <= size; i++)
+	for (r = 1; r <= size; r++)
 	{
-		for (j = 0; j < size; j++)
+		for (s = 0; s < size; s++)
 		{
 			_putchar(' ');
 		}
-		for (k = 1; k <= i; k++)
+		for (t = 1; t <= r; t++)
 		{
 			_putchar('#');
 		}
