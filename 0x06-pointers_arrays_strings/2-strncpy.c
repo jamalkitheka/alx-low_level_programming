@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _strncopy - copies a string from index 0 of 'dest'
- * @dest: first parameter
- * @src: second parameter
- * @n: Number of chars to copy
- * Return: edited string
+ * _strncpy - Copy a string strting from index 0 of 'dest'.
+ * @dest: string
+ * @src: string
+ * @n: number of chars to copy
+ * Return: 'dest' edited string
  */
 
 char *_strncpy(char *dest, char *src, int n)
