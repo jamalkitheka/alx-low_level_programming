@@ -4,19 +4,21 @@
  * @n: the integer to print
  * Return: an integer
  */
+
 void print_number(int n)
 {
-	if (n < 0)
+	if (n > -1)
 	{
-		_putchar('_');
+		if (n > 9)
+			print_number(n / 10);
+		_putchar('0' + n % 10);
+	}
+	else
+	{
+		_putchar('-');
 		if (n < -9)
 			print_number(n / -10);
 		_putchar('0' - n % 10);
 	}
-	else
-	{
-		if (n > 9)
-			print_number(n / 10);
-		_putchar(n % 10 + '0');
-	}
 }
+
