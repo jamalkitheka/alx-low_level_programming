@@ -7,22 +7,22 @@
 
 char *cap_string(char *n)
 {
-	char *ws = " \t\n,;.!?\"(){}";
-	int x;
-	int y;
+	char *r = n;
+	char a[] = " \t\n,;.!?\"(){}";
+	int i;
+	int cs = 1;
 
-	for (x = 0, y = 0; n[x]; ++x)
+	while (*n)
 	{
-		if ('a' <= n[x] && n[x] <= 'z')
+		if (cs && *n >= 'a' && *n <= 'z')
+			*n -= 32;
+		cs = 0;
+		for (i = 0; i < 12; i++)
 		{
-			if (x)
-			{
-				for (y = 0; ws[y] && ws[y] != n[x - 1]; ++x)
-					;
-			}
-			if (ws[y])
-				n[x] -= ('a' - 'A');
+			if (*n == a[i])
+				cs = 1;
 		}
+		n++;
 	}
-	return (n);
+	return (r);
 }
