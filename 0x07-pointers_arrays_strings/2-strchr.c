@@ -3,8 +3,7 @@
  * _strchr - function that locates a character in a string.
  * @s: char string array
  * @c: char to find
- * Return: a pointer to the first occurrence of the character c in the string s, or NULL if the character is not found
- *
+ * Return: a pointer to the first occurrence of the character c in the string s, or NULL.
  */
 
 char *_strchr(char *s, char c)
