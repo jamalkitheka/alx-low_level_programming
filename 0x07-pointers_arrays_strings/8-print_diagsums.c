@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * print_diagsums - function that prints the sum of the two diagonals of a square matrix of integers
+ * print_diagsums - function that prints the sum of the two diagonals
+ * of a square matrix of integers
  * @a: multidimensional array
  * @size: size of multidimensional array
  * Return: sum of the diagonal of the matrix
