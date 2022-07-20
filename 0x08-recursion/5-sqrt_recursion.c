@@ -17,7 +17,6 @@ int __sqrt_recursion(int n, int o)
 /**
  * _sqrt_recursion - compute the square root of a number
  * @n: the number to compute the square root of
- *  
  * Return: the natural square root of n,
  * or -1 if n has no natural square root
  */
