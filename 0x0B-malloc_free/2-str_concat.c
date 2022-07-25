@@ -27,9 +27,9 @@ char *str_concat(char *s1, char *s2)
 	y = 0;
 	while (w < z)
 	{
-		if (w <= x)
+		if (w < x)
 			s[w] = s1[w];
-		if (w > x)
+		if (w >= x)
 		{
 			s[w] = s2[y];
 			y++;
