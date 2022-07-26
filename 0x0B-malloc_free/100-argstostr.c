@@ -25,7 +25,7 @@ char *argstostr(int ac, char **av)
 		{
 			array[i] = av[av_c][av_i];
 			array[i + 1] = '\n';
-			i++
+			i++;
 		}
 	}
 	array[i] = '\0';
