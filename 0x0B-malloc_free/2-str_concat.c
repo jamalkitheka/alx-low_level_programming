@@ -6,12 +6,12 @@ int str_count(char *str);
  * str_concat - function that concatenates two strings.
  * @s1: first string
  * @s2: second string
- * Return: s1 + s2
+ * Return: pointer to the allocated space if successful, else null
  */
 
 char *str_concat(char *s1, char *s2)
 {
-	int x, y, z, w;
+	int x, y, z, w = 0;
 	char *s;
 
 	x = str_count(s1);
