@@ -37,3 +37,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	s[y] = '\0';
 	return (s);
 }
+
+/**
+ * _strlen - find length of string
+ * @p: string
+ * Return: length of string
+ */
+int _strlen(char *p)
+{
+	int x;
+
+	for (x = 0; p[x] != '\0'; x++)
+		;
+	return (x);
+}
