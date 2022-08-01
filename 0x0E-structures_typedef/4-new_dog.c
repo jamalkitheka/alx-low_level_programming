@@ -11,65 +11,38 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *my_dog;
-	char *name_cpy;
-	char *owner_cpy;
+	struct dog *d;
+	int x, y, z;
+	char *n, *o;
 
-	name_cpy = malloc(sizeof(char) * _strlen(name));
-	owner_cpy = malloc(sizeof(char) * _strlen(owner));
-	if (name_cpy == NULL || owner_cpy == NULL)
+	d = malloc(sizeof(struct dog));
+	if (d == NULL)
 	{
-		free(name_cpy);
-		free(owner_cpy);
 		return (NULL);
 	}
-	_strcpy(name_cpy, name);
-	_strcpy(owner_cpy, owner)
-	my_dog = malloc(sizeof(dog_t));
-	if (my_dog == NULL)
+	for (x = 0; name[x] != '\0'; x++)
+		;
+	for (y = 0; owner[y] != '\0'; y++)
+		;
+	n = malloc(sizeof(char) * x + 1);
+	if (n == NULL)
 	{
-		free(name_cpy);
-		free(owner_cpy);
+		free(d);
 		return (NULL);
 	}
-	my_dog->name = name_cpy;
-	my_dog->age = age;
-	my_dog->owner = owner_cpy;
-	return (my_dog);
-}
-
-/**
- * _strcpy - Copy a string
- * @dest: Pointer to the string array for copying
- * @src: number of elements to extract
- * Return: Nothing
- */
-char *_strcpy(char *dest, char *src)
-{
-	int x = 0;
-
-	while (*(src + x) != '\0')
+	o = malloc(sizeof(char) * y + 1);
+	if (o == NULL)
 	{
-		*(dest + x) = *(src + x);
-		x++;
+		free(n);
+		free(d);
+		return (NULL);
 	}
-	*(dest + x) = '\0';
-	return (dest);
-}
-
-/**
- * _strlen - Determines the lenght of a string
- * @s: Set of characters
- * Return: Nothing
- */
-int _strlen(char *s)
-{
-	int x = 0;
-
-	while (*(s + x) != '\0')
-	{
-		x++;
-	}
-	x++;
-	return (x);
+	for (z = 0; z <= x; z++)
+		n[z] = name[z];
+	for (z = 0; z <= y; z++)
+		o[z] = owner[z];
+	d->name = n;
+	d->age = age;
+	d->owner = o;
+	return (d);
 }
