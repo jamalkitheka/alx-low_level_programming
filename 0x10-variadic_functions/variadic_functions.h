@@ -2,6 +2,7 @@
 #define VARIADIC_FUNCTION
 #include <stdio.h>
 #include <stlib.h>
+#include <stdarg.h>
 
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
