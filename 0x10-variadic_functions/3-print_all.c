@@ -8,32 +8,43 @@
 
 void print_all(const char * const format, ...)
 {
-	char *separator = "";
-	int x, y = 0;
-	va_list arg;
+	char *arg;
+	unsigned int x = 0, middle = 0;
+	va_list valist;
 
-	datatype choice[] = { {'c', print_char},
-		{'i', print_int},
-		{'f', print_float},
-		{'s', print_string},
-		{'\0', NULL} };
-	va_start(arg, format);
-
-	while (format != NULL && format[y] != '\0')
+	va_start(valist, format);
+	while (format && format[x])
 	{
-		x = 0;
-		while (choice[x].letter != '\0')
+		if (middle)
+			printf(", ");
+		switch (format[x])
 		{
-			if (choice[x].letter == format[y])
-			{
-				printf("%s", separator);
-				choice[x].func(arg);
-				separator = ", ";
-			}
-			x++;
+			case 'c':
+				printf("%c", va_arg(valist, int));
+				break;
+			case 'i':
+				printf("%d", va_arg(valist, int));
+				break;
+			case 'f':
+				printf("%f", va_arg(valist, double));
+				break;
+			case 's':
+				arg = va_arg(valist, char *);
+				if (arg)
+				{
+					printf("%s", arg);
+					break;
+				}
+				printf("%p", arg);
+				break;
+			default:
+				middle = 0;
+				x++;
+				continue;
 		}
-		y++;
+		middle = 1;
+		x++;		
 	}
-	va_end(arg);
 	printf("\n");
+	va_end(valist);
 }
