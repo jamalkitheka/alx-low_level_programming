@@ -45,7 +45,7 @@ void print_all(const char * const format, ...)
 				continue;
 		}
 		middle = 1;
-		x++;		
+		x++;
 	}
 	printf("\n");
 	va_end(valist);
